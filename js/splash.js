@@ -2,7 +2,7 @@ function initSplash() {
 	$('#splash').empty();
 	var device = air.EncryptedLocalStore.getItem( 'device' );
 	if(device == 'android') {
-		var msg = $('<p>The splash screen is currently only available for iPhone</p>');
+		var msg = $('<p style="position: static;">The splash screen is currently only available for iPhone</p>');
 		$('#splash').append(msg);
 	}
 	else {

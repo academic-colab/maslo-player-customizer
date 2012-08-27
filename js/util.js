@@ -108,9 +108,20 @@ function processFile(event, self, res) {
 	img.onload = function() {
 		var width = img.width;
 		var height = img.height;
-		if((width == height && width == res) ||						  //Valid icon
-		(height/width == 1.5 && (((height == 480) && (name == 'splash_lores')) || 
-								(height == 960 && (name == "splash_hires"))))) {  //Valid splash
+		if(width == height && width == res) {	//Valid icon
+			if(device == 'android') {
+				for(var i = 1; i <= 3; i++) {
+					addFileToProject(files[0].nativePath, name, i);
+				}
+				self.src = 'file://' + files[0].nativePath;
+				$('#lrIcon img').attr('src', 'file://' + files[0].nativePath);
+			} else {
+				addFileToProject(files[0].nativePath, name, res);
+				self.src = 'file://' + files[0].nativePath;
+			}
+		}
+		else if (height/width == 1.5 && (((height == 480) && (name == 'splash_lores')) || 
+								(height == 960 && (name == "splash_hires")))) {  //Valid splash
 			addFileToProject(files[0].nativePath, name, res);
 			self.src = 'file://' + files[0].nativePath;
 		}
@@ -174,8 +185,9 @@ function imageFolder(device, icon) {
 	var str;
 	if(device == "android") {
 		if(icon) {
-			str = (icon == 57) ? sep + 'res' + sep + 'drawable-ldpi' + sep :
-								sep + 'res' + sep + 'drawable-hdpi' + sep;
+			str = (icon == 1) ? sep + 'res' + sep + 'drawable-ldpi' + sep :
+				  (icon == 2) ? sep + 'res' + sep + 'drawable-hdpi' + sep :
+				  				sep + 'res' + sep + 'drawable-mdpi' + sep;
 		} else
 			str = sep + 'assets' + sep + 'www' + sep + 'img' + sep + 'menu' + sep;
 	}

@@ -1,0 +1,13 @@
+<application xmlns="http://ns.adobe.com/air/application/2.7"> 
+    <id>org.academiccolab.theme</id>
+  	<versionNumber>0.1.0</versionNumber>
+	<versionLabel>0.1.0 Alpha 1</versionLabel>
+    <filename>Theme Picker</filename> 
+    <initialWindow> 
+        <content>index.html</content> 
+ 			<visible>true</visible>
+    		<width>1000</width>
+    		<height>800</height>
+   			<minSize>1000 750</minSize>
+    </initialWindow> 
+</application>

@@ -1,0 +1,331 @@
+body {
+  background: #ebf4f9;
+  font-family: helvetica;
+}
+h2 {
+	padding: 2px;
+	margin: 0;
+}
+
+/******************
+/* Header styles **
+******************/
+#header {
+	padding: 0;
+	margin: 5px auto;
+	position: relative;
+	width: 981px;
+	border: 1px solid gray;
+	border-radius: 4px;
+	background: -webkit-gradient(
+	linear, left top, left bottom, 
+	color-stop(0%,#f2f6f8), 
+	color-stop(54%,#d8e1e7), 
+	color-stop(55%,#b5c6d0), 
+	color-stop(100%,#e0eff9));
+}
+#header h1 {
+	padding-bottom: 0px;
+	padding-left: 20px;
+	font-size: 30pt;
+	margin: 10px;
+	color: #404040;
+	font-variant:small-caps;
+}
+
+/***************
+/**** Tabs *****
+****************/
+#tabs {
+	margin: 5px auto;
+	position: relative;
+	width: 975px;
+	visibility: hidden;
+}
+.tabnav li a {  
+text-transform: uppercase;  
+color: #333;  
+font-weight: bold;  
+padding: 4px 6px;   
+}  
+  
+.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {  
+background: white;  
+color: #333;  
+text-decoration: none;  
+}  
+  
+.tabdiv {  
+height: 600px;
+margin-top: 2px;  
+background: #fff;  
+padding: 5px; 
+}
+
+/**********************
+/* Color Picker styles
+**********************/
+#phone img {
+	position: absolute;
+}  
+
+#colorwheel {
+	position: absolute;
+	width: 340px;
+	height: 240px;
+	border: inset #A3AEB5 1px;
+	left: 355px;
+	top:85px;
+	padding: 10px;
+	border-radius: 5px;
+	background: #DCE3E8;
+}
+#colorwheel h2{
+	border-bottom: 1px inset #394952;
+}
+#colorwheel form  {
+	padding-top: 10px;
+}
+#colorwheel input  {
+	margin-top: 10px;
+	margin-left: 30px;
+}
+#options li, #options ul {
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	list-style: none;
+	color: #333;
+}
+#options li:hover {
+	color: #48AFF0;
+}
+#options{
+	float: left;
+}
+#options input{
+	display: none;
+}
+#options button {
+	margin: 0;
+	margin-top: 8px;
+}
+#miniColors {
+	float right;
+	margin-left: 50px;
+}
+
+
+#phonecontainer, #splashcontainer {
+	z-index: 1;
+	width: 225px;
+	height: 339px;
+	border: 1px solid black;
+	font-family: helvetica;
+	position: absolute;
+	top: 176px;
+	left: 66px;
+	background: #F7FCFE;	
+}
+
+#phonecontainer .header {
+	width: 225px;
+	height: 35px;
+	background: green; /* #8492A4; */
+	position: relative;
+}
+#phonecontainer .header_font {
+	padding: 8px 0 0 36px;
+	margin:0;
+	float: left;
+	font-size: 13pt;
+	position: absolute;
+	left: 50px;
+	top: 1px; 
+	color: #FFFFFF;
+}
+#phonecontainer button {
+	padding: 0 12px;
+	background: #373A3F;
+	color:  #FFFFFF;
+	border-radius: 4px;
+	height: 23px;
+	margin: 6px;
+	font-size:6pt;
+	border: black;
+	position: absolute;
+	top: 0px;
+}
+#phonecontainer .right_button {
+	right: 10px;
+}
+#phonecontainer .left_button {
+	left:10px;
+}
+#phonecontainer .light_row, #phonecontainer .dark_row {
+	height: 40px;
+	width: 225px;
+}
+#phonecontainer .light_row {
+	background: #fc7821; /* #F7FCFE; */
+	color: black;
+}
+#phonecontainer .dark_row {
+	background:  yellow;/* #CCDAE3; */
+	color: #000;
+}
+#phonecontainer .light_row_font {
+	color: #333; 
+	position: absolute;
+	font-size: 12pt;
+	padding: 12px 0 0 10px;
+	margin: 0;
+}
+#phonecontainer .footer {
+	height: 40px;
+	width: 225px;
+	background: black;
+	position: absolute;
+	bottom: 0;
+}
+#phonecontainer .footer img {
+	height: 40px;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 52px;
+	border: black;
+	border-radius: 0;
+}
+
+#footer1 {
+	position: absolute;
+	left: 350px;
+	bottom: 75px;
+	width: 565px;
+	padding: 10px;
+	background: #DCE3E8;
+	border: inset #A3AEB5 1px;
+	border-radius: 5px;
+	margin:5px;
+}
+#footer1 img{
+	position: relative;
+	height: 70px;
+	width: 70px;
+	float: left;
+	border-right: 1px solid #222;
+	padding: 0;
+	margin: 0;
+}
+#normalstate, #hoverstate {
+	float: left;
+	height: 70px;
+	border: 1px solid #DCE3E8;
+	margin-bottom: 5px;
+	background: #222;
+}
+
+table td {
+	width: 70px;
+	font-size: 12pt;
+}
+
+#dialog button {
+	margin-top: 10px;
+}
+#change {
+	position: absolute;
+	top: 620px;
+	left: 90px;
+}
+
+/********************
+/* App icon styles
+********************/
+#iconmng {
+	padding: 10px;
+	width: 550px;
+	height: 500px;
+	margin: 60 auto;
+}
+#iconmng #lrIcon,#iconmng #hrIcon {
+	float: left;
+	width: 160px;
+	height: 180px;
+}
+
+#iconmng p {
+	float: right;
+	width: 350px;
+	font-size: 14pt;
+	padding: 0px;
+}
+#lrIcon h3, #hrIcon h3 {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	padding-left: 18px;
+}
+#lrIcon img {
+	margin: 28px 28px 28px 56px;
+	padding: 0;
+	border-radius: 4px;
+}
+#hrIcon img {
+	padding: 0;
+	margin-left: 30px;
+	margin-top: 5px;
+	border-radius: 8px;
+}
+
+/******************
+/* Splash screen
+*******************/
+#splashphone {
+	float: left;
+	position: relative;
+}
+#splash p {
+	width: 350px;
+ 	position: absolute;
+	left: 350px;
+	top: 100px;
+}
+#lowrescontainer {
+	width: 160px;
+	height: 240px;
+	border: 1px solid black;
+	position: absolute;
+	left: 350px;
+	bottom: 85px;
+	border-radius: 2px;
+}
+#splash .hres, #splash .lres {
+	padding: 0;
+	margin: 0;
+	bottom: 45px;
+	position: absolute;
+}
+#splash .hres {
+	left: 130px;
+}
+#splash .lres {
+	left:380px;
+}
+
+/********************
+/* The help screen **
+********************/
+#helpscreen {
+	text-decoration: none;
+	float: right;
+	color: blue;
+	padding: 6px;
+	margin-right: 20px;
+}
+#helpscreen:hover {
+	text-decoration: underline;
+}
+
+

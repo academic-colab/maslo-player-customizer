@@ -1,0 +1,220 @@
+<html>
+	<head>
+		<link type="text/css" href="css/jquery-ui-1.8.22.custom.css" rel="stylesheet" />
+		<link type="text/css" href="css/jquery.miniColors.css" rel="stylesheet" />
+		<link type="text/css" href="#" rel="stylesheet" id="customCSS" />
+		<link type="text/css" href="css/screen.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="header">
+			<h1>The MASLO Skin Creator<h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabnav">
+				<li><a href="#phone">Color Picker</a></li>
+				<li><a href="#icon">App Icon</a></li>
+				<li><a href="#splash">Splash Screen</a></li>
+				<a id="helpscreen" href="#helpsis">Help</a>
+			</ul>
+		
+		<div id="phone" class="tabdiv">
+			<div id="phonecontainer">
+				<div class="header"></div>
+					<button class="left_button" type="Sample"><span class="button_font">Sort</span></button>
+					<button class="right_button" type="Sample"><span class="button_font">Edit</span></button>
+				<h3 class="header_font">Home</h3>
+					<h3 class="light_row_font">Content Pack 1</h3>
+				<div class="dark_row"></div>
+					<h3 class="light_row_font">Content Pack 2</h3>
+				<div class="light_row"></div>
+					<h3 class="light_row_font">Content Pack 3</h3>
+				<div class="dark_row"></div>
+				<div class="light_row" style="height:145px;"></div>
+				<div class="footer">
+					<img id="homeex" alt="home" src="#" />
+					<img id="storeex" alt="store" src="#"/>
+					<img id="searchex" alt="search" src="#" />
+					<img id="moreex" alt="more" src="#" />
+				</div>
+			</div>
+			<img id="phoneex" width="300" src="img/phone.png" alt="iphone" />
+			
+			<div id="colorwheel">
+			
+			<h2>Colors</h2>
+			<form id="options">
+				<ul>
+					<li onclick="updateColorOnClick(0, rgb2hex($('.header').css('background-color')));">
+						<input type="radio" name="color" value="header" />Header
+					</li>
+					<li onclick="updateColorOnClick(1, rgb2hex($('.header_font').css('color')));">
+						<input type="radio" name="color" value="header_font" />Header font
+					</li>
+					<li onclick="updateColorOnClick(2, rgb2hex($('.dark_row').css('background-color')));">
+						<input type="radio" name="color" value="dark_row" />Dark row
+					</li> 
+					<li onclick="updateColorOnClick(3, rgb2hex($('.light_row').css('background-color')));">
+						<input type="radio" name="color" value="light_row" />Light row
+					</li>
+					<li onclick="updateColorOnClick(4, rgb2hex($('.light_row_font').css('color')));">
+						<input type="radio" name="color" value="light_row_font" />Main font
+					</li>
+					<li onclick="updateColorOnClick(5, rgb2hex($('#phonecontainer button').css('background-color')));">
+						<input type="radio" name="color" value="button" />Buttons
+					</li>
+					<li onclick="updateColorOnClick(6, rgb2hex($('#phonecontainer button').css('color')));">
+						<input type="radio" name="color" value="button_font" />Button font
+					</li>
+					<li>
+						<button class="button" id='submitcss' type="button">Save</button>
+					</li>
+				</ul>	
+			</form>
+				<input  id="miniColors" size="10" />
+				
+			</div>
+			<div id="footer1">
+				<h2>Footer Icons</h2>
+				<table>
+					<tr>
+						<td>Home</td>
+						<td>Store</td>
+						<td>Search</td>
+						<td>More</td>
+						<td style="width:60px;">Back</td>
+						<td style="width:75px;">Settings</td>
+						<td>Help</td>
+					</tr>
+				</table>
+				<div id="normalstate">
+					<img  id="home" src="img/pholder_home.png" alt="Home" />
+					<img  id="store" src="img/pholder_shop.png" alt="Shop" />
+					<img  id="search" src="img/pholder_search.png" alt="Search" />
+					<img  id="more" style="border-right: 8px solid #DCE3E8;" src="img/pholder_more.png" alt="More" />
+					<img  id="back" src="img/pholder_back.png" alt="Back" />
+					<img  id="settings" src="img/pholder_settings.png" alt="Settings" />
+					<img  id="help" style="border-right:none;" src="img/pholder_help.png" alt="Help" />
+					<img  title="name" src="img/normal_statev.png" style="border: none;background: #DCE3E8;width: 37px !important; " />
+				</div>
+				
+				<div id="hoverstate">
+					<img  id="home_over" src="img/pholder_home.png" alt="Home hoverstate" />
+					<img  id="store_over" src="img/pholder_shop.png" alt="Shop hoverstate" />
+					<img  id="search_over" src="img/pholder_search.png" alt="Search hoverstate" />
+					<img  id="more_over" style="border-right: 8px solid #DCE3E8;" src="img/pholder_more.png" alt="More hoverstate" />
+					<img  id="back_over" src="img/pholder_back.png" alt="Back hoverstate" />
+					<img  id="settings_over" src="img/pholder_settings.png" alt="Settings hoverstate" />
+					<img  id="help_over" style="border-right:none;" src="img/pholder_help.png" alt="Help hoverstate" />
+					<img  title="name" src="img/over_statev.png" style="border: none;background: #DCE3E8;width: 37px !important;" />
+				</div>	
+			</div>
+			<button class="button" id="change" type='button'>Change Project</button>	
+		</div>
+		<div id="icon" class="tabdiv">
+			<div id="iconmng">
+				<div id="lrIcon">
+					<h3>Low Res</h3>
+					<img src="" width="57" height="57" />
+				</div>
+				<p>
+					Simply drag and drop your icons. If it is an iPhone project, it is required
+					to supply both high resolution and low resolution images. <br /><br />The dimensions are 114px and 57px 
+					respectively. For Android, only the high res version is needed.
+				</p>
+				<div id="hrIcon">
+					<h3>High Res</h3>
+					<img src="" width="114" height="114" />
+				</div>
+			</div>
+		</div>
+		<div id="splash" class="tabdiv">
+		</div>		
+		</div>	
+	</body>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/AIRAliases.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
+	<script type="text/javascript" src="js/colorPicker.js"></script>
+	<script type="text/javascript" src="js/CSS.js"></script>
+	<script type="text/javascript" src="js/appIcon.js"></script>
+	<script type="text/javascript" src="js/splash.js"></script>
+	<script type="text/javascript" src="js/help.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript">	
+		$(document).ready(function() {
+			var check = $("<div id='dialog'><p>Please select a device and browse \
+ 			to the folder containing the application files.</p> \
+ 			<input type='radio' name='device' value='iphone'>Iphone</input> \
+ 			<input type='radio' name='device' value='android'>Android</input> <br />\
+ 			<button id='browse' type='button'>Browse</button> \
+ 			</div>");
+ 			var browsalog = check.dialog({
+ 					title: 'Select Folder',
+ 					height: 210,
+ 					width: 400,
+ 					modal: true,
+ 					draggable: false,
+ 					autoOpen: false,
+ 					closeOnEscape: false,
+ 					resizable: false
+ 			});
+			var path = air.EncryptedLocalStore.getItem( 'directory' );
+			var device = air.EncryptedLocalStore.getItem( 'device' );
+			if(!path) { //The case where the path is not entered.
+				browsalog.dialog('open');
+			}
+			else {
+				var css = new CSS(path, device);
+				if(css.cssString){
+					appIconInit(css);
+					loadIcons();
+					initSplash();
+					colorPickerInit(css);
+					styleInit(css);
+					iconInit(device, path);
+					setTimeout(colorInit, 1000, css);
+				} 
+			}		
+ 			$('#change').click(function() {
+				browsalog.dialog('open');
+			});
+//  			$('a.ui-dialog-titlebar-close' ).remove();
+    		$("#tabs").tabs();
+			$('#browse').click(function() {
+				var device = $('input[name=device]:checked').val();
+				if(!device) {
+					dropError("Please select a device");
+					return;
+				}
+				browse(function(e) {
+					var good = checkFolder(e.target.url, device);
+					if(good) {
+						var data = new air.ByteArray(); 
+						data.writeUTFBytes( e.target.url );
+						air.EncryptedLocalStore.setItem( 'directory', data ); 
+						var data = new air.ByteArray();
+						data.writeUTFBytes( device ); 
+						air.EncryptedLocalStore.setItem( 'device', data );
+						var customCSS = new CSS(e.target.url, device);
+						if(customCSS.cssString) {
+							colorPickerInit(customCSS);
+							styleInit(customCSS);
+							air.trace(device + " " + e.target.url);
+							loadIcons(); initSplash();
+							iconInit(device, e.target.url);
+							setTimeout(colorInit, 1000, customCSS);
+							check.dialog("close");
+						}
+					} else {
+						dropError("Please select a valid folder");
+					}
+					return false;
+				});
+			});
+			$('#helpscreen').click(function(){
+				help();
+			});		
+	});
+	</script>
+</html>
